@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivani Raikar | AI Developer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+/* NAVBAR */
+
+header{
+position:fixed;
+width:100%;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:rgba(2,6,23,0.8);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+header h1{
+font-size:22px;
+letter-spacing:1px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:30px;
+font-weight:500;
+position:relative;
+}
+
+nav a::after{
+content:'';
+position:absolute;
+bottom:-5px;
+left:0;
+width:0%;
+height:2px;
+background:#3b82f6;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+}
+
+.hero h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#60a5fa;
+}
+
+.hero p{
+max-width:700px;
+color:#cbd5f5;
+font-size:18px;
+line-height:1.7;
+}
+
+.btn{
+margin-top:30px;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:linear-gradient(135deg,#3b82f6,#2563eb);
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(59,130,246,0.4);
+}
+
+/* SECTION STYLE */
+
+.section{
+padding:120px 80px;
+max-width:1300px;
+margin:auto;
+}
+
+.section h2{
+font-size:34px;
+margin-bottom:40px;
+text-align:center;
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.skill{
+padding:12px 20px;
+background:#1e293b;
+border-radius:30px;
+border:1px solid #334155;
+transition:0.3s;
+}
+
+.skill:hover{
+background:#3b82f6;
+transform:translateY(-4px);
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.card{
+background:#020617;
+padding:30px;
+border-radius:15px;
+border:1px solid #1e293b;
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:'';
+position:absolute;
+width:200%;
+height:200%;
+background:linear-gradient(45deg,transparent,#3b82f6,transparent);
+transform:rotate(45deg);
+left:-150%;
+top:-150%;
+transition:0.5s;
+}
+
+.card:hover::before{
+left:100%;
+top:100%;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.02);
+border-color:#3b82f6;
+}
+
+.card h3{
+margin-bottom:12px;
+color:#60a5fa;
+}
+
+.card p{
+color:#cbd5f5;
+font-size:15px;
+line-height:1.6;
+}
+
+/* ACHIEVEMENTS */
+
+.achievement{
+background:#020617;
+padding:35px;
+border-radius:15px;
+border:1px solid #1e293b;
+text-align:center;
+}
+
+.achievement h3{
+color:#60a5fa;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.links{
+text-align:center;
+}
+
+.links a{
+display:inline-block;
+margin:15px;
+padding:12px 25px;
+border-radius:30px;
+background:#1e293b;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.links a:hover{
+background:#3b82f6;
+transform:translateY(-4px);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+color:#94a3b8;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Shivani Raikar</h1>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#achievements">Achievements</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+
+<section class="hero">
+
+<h2>Hello I'm <span>Shivani Raikar</span></h2>
+
+<p>
+Computer Science student passionate about Artificial Intelligence, Machine Learning and building impactful technology solutions. I focus on developing intelligent systems, AI chatbots and accessible platforms that solve real world problems.
+</p>
+
+<button class="btn" onclick="scrollToProjects()">Explore My Projects</button>
+
+</section>
+
+
+<section class="section" id="about">
+
+<h2>About Me</h2>
+
+<p style="text-align:center;max-width:800px;margin:auto;color:#cbd5f5;font-size:17px;line-height:1.7;">
+I am a Computer Science student focused on Artificial Intelligence, Machine Learning and Software Development. My work involves building AI powered systems including intelligent chatbots, accessibility platforms and medical technology tools. I enjoy solving real world problems through innovative engineering and impactful digital solutions.
+</p>
+
+</section>
+
+
+<section class="section" id="skills">
+
+<h2>Technical Skills</h2>
+
+<div class="skills">
+<div class="skill">C</div>
+<div class="skill">C++</div>
+<div class="skill">Python</div>
+<div class="skill">Web Development</div>
+<div class="skill">Artificial Intelligence</div>
+<div class="skill">Machine Learning</div>
+</div>
+
+</section>
+
+
+<section class="section" id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>Accessible Platform for Blind Individuals</h3>
+<p>
+Developed an accessible website designed for visually impaired users featuring voice based interaction and self readable interface. Users can complete forms using voice commands. The system includes an emergency information tab, an AI powered symptom remedy chatbot and a health hub navigator that connects users to nearby hospitals based on distance, affordability and accessibility.
+</p>
+</div>
+
+<div class="card">
+<h3>Medical Chatbot using RAG</h3>
+<p>
+Built an AI powered medical chatbot using Retrieval Augmented Generation. Users can upload medical documents and ask questions from the content. Implemented embeddings and vector search to retrieve relevant context and generate accurate responses.
+</p>
+</div>
+
+<div class="card">
+<h3>Legal AI Chatbot</h3>
+<p>
+Developed a legal chatbot capable of answering legal related queries using natural language processing. The system assists users in understanding legal concepts and provides contextual information based on user questions.
+</p>
+</div>
+
+<div class="card">
+<h3>Prescription Analysis System</h3>
+<p>
+Created an OCR based prescription analysis platform that extracts and organizes prescription data including doctor names and medicines. The system structures the information for future integration with blockchain for secure and tamper proof medical record storage.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="achievements">
+
+<h2>Achievements</h2>
+
+<div class="achievement">
+<h3>Samsung Solve for Tomorrow 2025</h3>
+<p>Participated in Samsung's innovation challenge focused on building technology solutions for real world societal problems.</p>
+</div>
+
+</section>
+
+
+<section class="section" id="contact">
+
+<h2>Connect With Me</h2>
+
+<div class="links">
+<a href="https://www.linkedin.com/in/shivani-raikar-4240bb396/" target="_blank">LinkedIn</a>
+<a href="https://github.com/Shambhavi7504" target="_blank">GitHub</a>
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Shivani Raikar | AI Developer Portfolio</p>
+
+</footer>
+
+
+<script>
+
+// Smooth scroll with offset for fixed navbar
+const headerOffset = 80;
+
+function scrollWithOffset(id){
+  const element = document.getElementById(id);
+  const elementPosition = element.getBoundingClientRect().top;
+  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
+  });
+}
+
+// Hero button
+function scrollToProjects(){
+  scrollWithOffset("projects");
+}
+
+// Navbar links
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", function(e){
+    e.preventDefault();
+    const targetId = this.getAttribute("href").replace("#","");
+    scrollWithOffset(targetId);
+  });
+});
+
+</script>
+
+</body>
+</html>
